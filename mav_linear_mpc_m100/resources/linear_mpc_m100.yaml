@@ -64,16 +64,16 @@
   Ki_height : 0.2
 
   height_error_integration_limit : 5
-  enable_offset_free : false
+  enable_offset_free : true
   
   use_height_error_integrator : false
   use_KF_estimated_state : false
   
-  sampling_time: 0.02    #IMPORTANT: set this equal to the rate of odometry msg
+  sampling_time: 0.005    #IMPORTANT: set this equal to the rate of odometry msg
   prediction_sampling_time: 0.1
 
   Ki_xy: 0.2
   Ki_z: 0.3
   position_error_integration_limit: 2
   antiwindup_ball: 0.4
-  enable_integrator : false
+  enable_integrator : true
