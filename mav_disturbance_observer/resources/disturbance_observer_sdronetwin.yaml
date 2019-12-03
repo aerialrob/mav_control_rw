@@ -1,0 +1,80 @@
+## Kalman Filter Parameters:
+KF_observer:
+  calibration_duration: 5 #sec
+  
+  #covariance of initial state
+  P0_position: 0.1
+  P0_velocity: 0.1
+  P0_attitude: 0.1
+  P0_angular_velocity: 0.1
+  P0_force: 0.1
+  P0_torque: 0.1
+  
+  #process noise
+  q_position: 0.01
+  q_velocity: 0.025
+  q_attitude: 0.015
+  q_angular_velocity: 0.02
+  q_force: 0.1
+  q_torque: 0.1
+  
+  #measurement noise
+  r_position: 0.001
+  r_velocity: 0.0012
+  r_attitude: 0.01
+  
+  #limits
+  omega_limit :  [ 3.000000 ,3.000000 ,2.000000]
+  external_forces_limit :  [ 5.000000 ,5.000000 ,3.0000000]      #m/s^2
+  external_moments_limit :  [ 20.000000 ,20.000000 ,20.000000]  #rad/s^2
+
+  #model from system identification (2nd order attitude model) eurecat
+  drag_coefficients : [ 0.010000 , 0.010000 , 0]
+  roll_omega :   14.385984935790619
+  roll_damping :    0.837589854041752
+  roll_gain :    0.911913891793797
+  pitch_omega : 5.578778291506265
+  pitch_damping :  0.228884942795108
+  pitch_gain : 0.785293972300441
+  yaw_omega :  14.739281058182961
+  yaw_damping : 0.810320811017966
+  yaw_gain : 0.966161173481282
+
+
+
+  #model from system identification (2nd order attitude model) eurecat
+  # drag_coefficients : [ 0.010000 , 0.010000 , 0]
+  # roll_omega : 6.3836 #8.3405
+  # roll_damping : 0.6935 #0.6144
+  # roll_gain : 1.0466 #1.0969
+  # pitch_omega : 6.3907 #7.8110
+  # pitch_damping : 0.6923 #0.5160
+  # pitch_gain : 1.0257  #1.0407
+  # yaw_omega : 8.2538
+  # yaw_damping : 0.8539
+  # yaw_gain : 0.9415
+
+  #  # from paper
+  # drag_coefficients : [ 0.010000 , 0.010000 , 0]
+  # roll_omega : 5.2
+  # roll_damping : 0.512
+  # roll_gain : 0.975
+  # pitch_omega : 5.239
+  # pitch_damping : 0.573
+  # pitch_gain : 1.052
+  # yaw_omega : 23.448
+  # yaw_damping : 1.899
+  # yaw_gain : 1.079
+
+
+  #   #model from system identification (2nd order attitude model) flourish
+  # drag_coefficients : [ 0.010000 , 0.010000 , 0]
+  # roll_omega : 7.07
+  # roll_damping : 0.72
+  # roll_gain : 0.8
+  # pitch_omega : 7.07
+  # pitch_damping : 0.76
+  # pitch_gain : 0.84
+  # yaw_omega : 5.000000
+  # yaw_damping : 0.950000
+  # yaw_gain : 1.000000

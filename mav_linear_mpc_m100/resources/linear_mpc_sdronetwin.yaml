@@ -1,0 +1,79 @@
+## Controller Parameters:
+  mass: 1.946
+  roll_time_constant: 0.119022838156907
+  roll_gain:  0.926977345601053
+  pitch_time_constant: 0.068776131432316
+  pitch_gain: 0.842169374326420
+  vertical_velocity_time_constant : 0.252764567435813
+  vertical_velocity_gain :  1.024470050173567
+  drag_coefficients : [ 0.08 , 0.08 , 0.0]
+
+  # Model estimated in the simulator
+  # mass: 3.0
+  # roll_time_constant: 0.2629 #0.1531
+  # roll_gain:  1.1096 #1.079
+  # pitch_time_constant:      0.2648 #0.1440
+  # pitch_gain:     1.0898 #1.0701
+  # vertical_velocity_time_constant :   0.4436 #0.4137
+  # vertical_velocity_gain : 1.0254 #1.0176
+  # drag_coefficients : [ 0.08 , 0.08 , 0.0]
+
+
+  
+# Model estimation from MPC paper
+  # mass: 3.29
+  # roll_time_constant : 0.472
+  # pitch_time_constant : 0.411
+  # vertical_velocity_time_constant : 0.334
+
+  # roll_gain : 1.673
+  # pitch_gain : 1.575
+  # vertical_velocity_gain : 1.118
+  # drag_coefficients : [ 0.08 , 0.08 , 0.0]
+
+
+
+
+# dynamic config default values:
+  q_x : 15.999919999999998
+  q_y : 15.999919999999998
+  q_z : 15.999919999999998
+
+  q_vx : 7.999959999999999
+  q_vy : 7.999959999999999
+  q_vz : 31.999839999999995
+
+  q_roll  : 51.999739999999996
+  q_pitch : 51.999739999999996
+
+  r_roll  : 155.22000000000003
+  r_pitch : 155.22000000000003
+  r_thrust : 15.0
+
+  r_droll  : 0.15
+  r_dpitch : 0.15
+  r_dthrust: 0.001
+
+  roll_max  : deg(18.35) #0.3234 in rad
+  pitch_max : deg(18.35) #0.3234 in rad 
+  thrust_min: -2 #m/s
+  thrust_max: 2 #m/s
+  yaw_rate_max: 1.5
+  
+  K_yaw : 1.9
+  Ki_height : 0.2
+
+  height_error_integration_limit : 5
+  enable_offset_free : true
+  
+  use_height_error_integrator : false
+  use_KF_estimated_state : false
+  
+  sampling_time: 0.005    #IMPORTANT: set this equal to the rate of odometry msg
+  prediction_sampling_time: 0.1
+
+  Ki_xy: 0.2
+  Ki_z: 0.3
+  position_error_integration_limit: 2
+  antiwindup_ball: 0.4
+  enable_integrator : true
